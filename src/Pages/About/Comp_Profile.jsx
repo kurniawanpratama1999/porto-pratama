@@ -1,8 +1,8 @@
-const Comp_Profile = ({ ReactIcon, detail }) => {
+const Comp_Profile = ({ collect }) => {
   return (
     <div className="flex items-center gap-3">
-      <ReactIcon className="text-4xl" />
-      <span className="text-3xl">{detail}</span>
+      <collect.icon className="text-4xl" />
+      <span className="text-3xl">{collect.detail}</span>
     </div>
   );
 };
