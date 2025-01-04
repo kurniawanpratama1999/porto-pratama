@@ -12,12 +12,12 @@ import { TbApi } from "react-icons/tb";
 
 const Page_Home = () => {
   return (
-    <Container className="text-gray-300 px-[20%] justify-center items-center gap-10">
-      <h2 className="text-center text-5xl">
+    <Container className="text-gray-300 px-[10%] sm:px-[10%] justify-center items-center gap-10">
+      <h2 className="text-center text-2xl md:text-4xl xl:text-5xl">
         Welcome Netizen DKI Jakarta dan Sekitarnya
       </h2>
-      <div className="w-full rounded-xl grid grid-cols-3 gap-4">
-        <div className="bg-gray-700 p-2 rounded-md ">
+      <div className="w-full rounded-xl max-lg:flex max-lg:flex-col lg:grid lg:grid-cols-3 gap-4">
+        <div className="bg-gray-700 py-2 px-4 rounded-md ">
           <p className="text-center">Frontend</p>
           <div className="flex flex-wrap text-7xl justify-center">
             <BiLogoReact />
@@ -25,7 +25,7 @@ const Page_Home = () => {
           </div>
           <p className="text-center">Keterangan</p>
         </div>
-        <div className="bg-gray-700 p-2 rounded-md ">
+        <div className="bg-gray-700 py-2 px-4 rounded-md ">
           <p className="text-center">Backend</p>
           <div className="flex flex-wrap text-7xl justify-center">
             <DiMysql />
@@ -34,7 +34,7 @@ const Page_Home = () => {
           </div>
           <p className="text-center">Keterangan</p>
         </div>
-        <div className="bg-gray-700 p-2 rounded-md ">
+        <div className="bg-gray-700 py-2 px-4 rounded-md ">
           <p className="text-center">Office</p>
           <div className="flex flex-wrap text-7xl justify-center">
             <PiMicrosoftExcelLogo />
@@ -45,8 +45,8 @@ const Page_Home = () => {
         </div>
       </div>
       <div className="text-center">
-        <p className="text-3xl">Bersama Kurniawan Pratama</p>
-        <p className="text-xl">Sebagai Software Engineer</p>
+        <p className="text-xl sm:text-3xl">Bersama Kurniawan Pratama</p>
+        <p className="text-md sm:text-xl">Sebagai Software Engineer</p>
       </div>
       <div className="w-fit flex mx-auto gap-5 justify-center text-2xl border-t border-gray-600 bg-gray-600 p-2 px-10 rounded-full">
         <FaWhatsapp/>
