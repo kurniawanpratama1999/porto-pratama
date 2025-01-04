@@ -1,8 +1,15 @@
-const Input = ({ label, htmlFor, type, className = "", ...props }) => {
+const Input = ({
+  label,
+  htmlFor,
+  type,
+  cLabel = "",
+  className = "",
+  ...props
+}) => {
   return (
     <label
       htmlFor={htmlFor}
-      className="relative h-fit flex pt-4 pb-2 text-gray-300 bg-zinc-900 border border-gray-300 rounded-md"
+      className={`relative h-fit flex pt-4 pb-2 text-gray-300 bg-zinc-900 border border-gray-300 rounded-md ${cLabel}`}
     >
       <p className="absolute -top-3 left-3 bg-zinc-900 px-3">{label}</p>
       <input

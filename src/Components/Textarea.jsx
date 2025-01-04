@@ -14,7 +14,7 @@ const Textarea = ({
       <textarea
         name={htmlFor}
         style={{resize: 'none'}}
-        className={`grow bg-transparent p-2 min-h-40 border-none outline-none ${className}`}
+        className={`grow bg-transparent p-2 min-h-24 border-none outline-none ${className}`}
         {...props}
       />
       <p className="text-right px-2 pt-2">200</p>

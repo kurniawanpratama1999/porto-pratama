@@ -2,46 +2,36 @@ import React from "react";
 import Container from "../../Components/Container";
 import { BiCalendar, BiMap, BiUser } from "react-icons/bi";
 import { TbGenderBigender } from "react-icons/tb";
-import { HiAcademicCap } from "react-icons/hi";
-import { BsPeopleFill } from "react-icons/bs";
 import { FaRunning } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
+import Comp_Image from "./Comp_Image";
+import Comp_Profile from "./Comp_Profile";
+import Comp_Message from "./Comp_Message";
+import { Comp_List, Comp_Menu } from "./Comp_List";
+import Comp_Education from "./Comp_Education";
+import Comp_Experience from "./Comp_Experience";
+import Comp_Skills from "./Comp_Skills";
 
 const Page_About = () => {
+  const profileCollection = [
+    { icon: BiUser, detail: "Kurniawan Pratama" },
+    { icon: TbGenderBigender, detail: "Laki-laki" },
+    { icon: BiCalendar, detail: "Nganjuk, 07 Januari 1999" },
+    { icon: BiMap, detail: "Kebayoran Lama, Jakarta Selatan" },
+  ];
+
   return (
     <Container className="px-[10%] text-gray-300 gap-10">
       <div className="grid grid-cols-[.3fr_auto] justify-center items-center gap-20">
-        <div
-          id="image-self-container"
-          className="w-40 bg-gray-500 h-52 -rotate-12"
-        >
-          <div
-            id="image-self"
-            className="w-full h-full relative bg-black rotate-12"
-          ></div>
-        </div>
+        <Comp_Image />
         <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-3">
-            <BiUser className="text-4xl" />
-            <span className="text-3xl">Kurniawan Pratama</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <TbGenderBigender className="text-4xl" />
-            <span className="text-3xl">Laki-Laki</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <BiCalendar className="text-4xl" />
-            <span className="text-3xl">Nganjuk, 07 Januari 1999</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <BiMap className="text-4xl" />
-            <span className="text-3xl">Kebayoran Lama, Jakarta Selatan</span>
-          </div>
+          {profileCollection.map((collect) => (
+            <Comp_Profile ReactIcon={collect.icon} detail={collect.detail} />
+          ))}
         </div>
       </div>
-      <p className="italic text-xl text-center bg-gradient-to-r from-transparent via-black to-transparent py-2 rounded-full ">
-        ( Still Looking For a Job )
-      </p>
+      <Comp_Message message="( Still Looking For a Job )" />
+      {/* 
       <div className="w-full flex gap-5">
         <div className="row-card basis-full flex flex-col gap-5">
           <div className="w-full flex flex-col">
@@ -49,22 +39,22 @@ const Page_About = () => {
               <HiAcademicCap />
               <h2>Education</h2>
             </div>
-            <ul className="list-decimal">
-              <li className="min-h-10 mt-2 ml-10">
+            <Comp_Menu>
+              <Comp_List>
                 <div>
-                  <h3 className="">Universitas Pamulang | IPK 3.42</h3>
+                  <h3>Universitas Pamulang | IPK 3.42</h3>
                   <p>S1 Manajemen (2016 -- 2020)</p>
                 </div>
-                <ul className="list-disc ml-4">
+                <Comp_Menu list="disc">
                   <li>
                     Meneliti keuangan PT Ace Hardware Indonesia berdasarkan
                     nilai Debt to Equity Ratio dan Price Earning Ratio.
                   </li>
                   <li>Selalu aktif dalam kegiatan presentasi.</li>
                   <li>Tidak aktif dalam kegiatan berorganinasi.</li>
-                </ul>
-              </li>
-              <li className="min-h-10 mt-2 ml-10">
+                </Comp_Menu>
+              </Comp_List>
+              <Comp_List>
                 <div>
                   <h3 className="relative">SMKN 59 | Nilai 7.3</h3>
                   <p>Pemasaran (2013 -- 2016)</p>
@@ -74,8 +64,8 @@ const Page_About = () => {
                   <li>Mempelajari dasar dasar ekonomi dan pemasaran.</li>
                   <li>Mempelajari sedikit tentang akuntansi.</li>
                 </ul>
-              </li>
-            </ul>
+              </Comp_List>
+            </Comp_Menu>
           </div>
 
           <div className="w-full flex flex-col">
@@ -187,7 +177,11 @@ const Page_About = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <Comp_Education />
+      <Comp_Experience />
+      <Comp_Skills />
     </Container>
   );
 };
