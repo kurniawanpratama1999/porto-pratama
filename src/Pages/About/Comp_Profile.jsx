@@ -1,8 +1,8 @@
 const Comp_Profile = ({ collect }) => {
   return (
     <div className="flex items-center gap-3">
-      <collect.icon className="text-4xl" />
-      <span className="text-3xl">{collect.detail}</span>
+      <collect.icon className="text-2xl min-w-10" />
+      <span className="text-xl">{collect.detail}</span>
     </div>
   );
 };

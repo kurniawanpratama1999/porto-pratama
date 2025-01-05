@@ -11,8 +11,8 @@ const Page_About = () => {
   const entriesAboutMe = Object.entries(dataAboutMe);
   
   return (
-    <Container className="px-[10%] text-gray-300 gap-10">
-      <div className="grid grid-cols-[.3fr_auto] justify-center items-center gap-20">
+    <Container className="sm:px-[10%] px-[5%] text-gray-300 gap-10">
+      <div className="grid sm:grid-cols-[.3fr_auto] justify-center items-center gap-20">
         <Comp_Image />
         <div className="flex flex-col gap-4">
           {profileCollection.map((collect, index) => (

@@ -5,9 +5,9 @@ import { MdMenu } from "react-icons/md";
 
 const cssNav = cName(
   {
-    base: "flex border-gray-600",
+    base: "flex border-gray-600 z-50",
     phone:
-      "flex-col top-16 left-0 bg-zinc-800 h-auto max-md:py-2 max-md:pl-3 max-md:pr-10 rounded-md gap-y-2",
+      "flex-col top-16 left-0 bg-zinc-800 h-auto max-md:border max-md:py-2 max-md:pl-3 max-md:pr-10 rounded-md gap-y-2",
     md: "md:grow md:flex-row md:top-0 md:left-0 md:static md:rounded-none md:bg-transparent md:items-center md:gap-5 md:pl-5 md:border-l-2",
   },
   {
