@@ -17,41 +17,39 @@ const Page_Home = () => {
         Welcome Netizen DKI Jakarta dan Sekitarnya
       </h2>
       <div className="w-full rounded-xl max-lg:flex max-lg:flex-col lg:grid lg:grid-cols-3 gap-4">
-        <div className="bg-gray-700 py-2 px-4 rounded-md ">
+        <div className="bg-zinc-800 py-2 px-4 rounded-md ">
           <p className="text-center">Frontend</p>
           <div className="flex flex-wrap text-7xl justify-center">
             <BiLogoReact />
             <BiLogoTailwindCss />
           </div>
-          <p className="text-center">Keterangan</p>
         </div>
-        <div className="bg-gray-700 py-2 px-4 rounded-md ">
+        <div className="bg-zinc-800 py-2 px-4 rounded-md ">
           <p className="text-center">Backend</p>
           <div className="flex flex-wrap text-7xl justify-center">
             <DiMysql />
             <BiLogoNodejs />
             <TbApi />
           </div>
-          <p className="text-center">Keterangan</p>
         </div>
-        <div className="bg-gray-700 py-2 px-4 rounded-md ">
+        <div className="bg-zinc-800 py-2 px-4 rounded-md ">
           <p className="text-center">Office</p>
-          <div className="flex flex-wrap text-7xl justify-center">
+          <div className="flex flex-wrap text-7xl justify-center relative">
             <PiMicrosoftExcelLogo />
             <PiMicrosoftWordLogo />
             <PiMicrosoftPowerpointLogo />
           </div>
-          <p className="text-center">Keterangan</p>
         </div>
       </div>
       <div className="text-center">
         <p className="text-xl sm:text-3xl">Bersama Kurniawan Pratama</p>
         <p className="text-md sm:text-xl">Sebagai Software Engineer</p>
       </div>
-      <div className="w-fit flex mx-auto gap-5 justify-center text-2xl border-t border-gray-600 bg-gray-600 p-2 px-10 rounded-full">
-        <FaWhatsapp/>
-        <FaInstagram/>
-        <FaGithub/>
+      <button className="px-5 py-2 bg-amber-700 rounded-full">Reach Me</button>
+      <div className="w-fit flex mx-auto gap-5 justify-center text-2xl border-t border-gray-600 bg-zinc-800 p-2 px-10 rounded-full">
+        <FaWhatsapp />
+        <FaInstagram />
+        <FaGithub />
       </div>
     </Container>
   );

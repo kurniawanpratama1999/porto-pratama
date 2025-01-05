@@ -1,8 +1,12 @@
+import { useEffect, useState } from "react";
+
 const Textarea = ({
   label,
   htmlFor,
   cLabel = "",
   className = "",
+  state,
+  setState,
   ...props
 }) => {
   return (
@@ -15,9 +19,13 @@ const Textarea = ({
         name={htmlFor}
         style={{ resize: "none" }}
         className={`grow bg-transparent p-2 min-h-24 border-none outline-none ${className}`}
+        value={state}
+        maxLength={200}
+        onChange={({ target }) => setState(target.value)}
+        spellCheck="false"
         {...props}
       />
-      <span className="text-right px-2 pt-2">200</span>
+      <span className="text-right px-2 pt-2">{200 - state.length}</span>
     </label>
   );
 };

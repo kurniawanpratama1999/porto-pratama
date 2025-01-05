@@ -1,5 +1,5 @@
 const Logo = ({ ReactIcon, title }) => (
-  <div className="sm:col-span-2 flex items-center justify-center gap-2 text-3xl">
+  <div className="lg:col-span-2 flex items-center justify-center gap-2 text-3xl">
     <ReactIcon />
     <span>{title}</span>
     <ReactIcon />
@@ -34,7 +34,7 @@ const List = ({ datas }) => (
 
 const Comp_Information = ({ val }) => {
   return (
-    <div className="grid sm:grid-cols-2 gap-x-10 gap-y-5">
+    <div className="grid lg:grid-cols-2 gap-x-10 gap-y-5">
       <Logo ReactIcon={val.logoIcon} title={val.logoTitle} />
       {val.headAndList.map((val, index) => (
         <div key={index} className="p-3 bg-zinc-800 rounded-md">

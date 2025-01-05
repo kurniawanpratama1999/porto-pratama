@@ -16,6 +16,7 @@ const Input = ({
         type={type}
         name={htmlFor}
         className={`grow bg-transparent px-3 py-1 border-none outline-none ${className}`}
+        spellCheck="false"
         {...props}
       />
     </label>
