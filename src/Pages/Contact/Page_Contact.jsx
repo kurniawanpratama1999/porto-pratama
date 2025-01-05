@@ -9,8 +9,8 @@ const Page_Contact = () => {
         Beri Saya Pesan
       </h2>
       <form className="grid grid-cols-2 gap-4">
-        <Input htmlFor="display-name" label="Your Name" type="text" />
-        <Input htmlFor="email" label="Email" type="email" />
+        <Input htmlFor="display-name" label="Your Name" type="text" cLabel="max-sm:col-span-2"/>
+        <Input htmlFor="email" label="Email" type="email" cLabel="max-sm:col-span-2"/>
         <Input
           htmlFor="purpose"
           label="purpose"
