@@ -12,7 +12,7 @@ const collection = [
     title: "This Portfolio",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, odio?",
-    href: "https://nesting.my.id/kurniawanpratama1999/porto-pratama",
+    href: "https://porto-pratama.vercel.app",
     createdAt: "Januari 2025",
     finishAt: "On Progress",
     software: "ReactJs, ExpressJs, MySQL, Tailwind Css",

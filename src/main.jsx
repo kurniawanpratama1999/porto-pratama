@@ -16,6 +16,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/contact" element={<Page_Contact />} />
         <Route path="/project" element={<Page_Project />} />
       </Route>
+        <Route path="*" element={<div className="h-dvh w-full grid place-items-center bg-zinc-900 text-gray-300">404: Not Found</div>} />
     </Routes>
   </BrowserRouter>
 );
