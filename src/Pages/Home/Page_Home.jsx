@@ -47,9 +47,9 @@ const Page_Home = () => {
       </div>
       <button className="px-5 py-2 bg-amber-700 rounded-full">Reach Me</button>
       <div className="w-fit flex mx-auto gap-5 justify-center text-2xl border-t border-gray-600 bg-zinc-800 p-2 px-10 rounded-full">
-        <FaWhatsapp />
-        <FaInstagram />
-        <FaGithub />
+        <a target="_blank" href="https://wa.me/6283827221096"<FaWhatsapp/></a>
+        <a target="_blank" href="https://instagram.com/its.about.tofu"><FaInstagram/></a>
+        <a target="_blank" href="https://github.com/kurniawanpratama1999"><FaGithub/></a>
       </div>
     </Container>
   );
