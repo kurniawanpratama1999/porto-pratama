@@ -15,7 +15,7 @@ const collection = [
     href: "https://porto-pratama.vercel.app",
     createdAt: "Januari 2025",
     finishAt: "On Progress",
-    software: "ReactJs, ExpressJs, MySQL, Tailwind Css",
+    software: "ReactJs, Tailwind Css",
   },
 ];
 

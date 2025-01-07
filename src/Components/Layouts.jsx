@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, Outlet, useLocation } from "react-router";
 import cName from "../Utils/cNames";
 import { MdMenu } from "react-icons/md";
+import { Helmet } from "react-helmet";
 
 const cssNav = cName(
   {
@@ -28,31 +29,36 @@ const Layouts = () => {
   const { pathname } = useLocation();
   const [hidden, setHidden] = useState(true);
 
+  useEffect(() => {}, [pathname]);
+
   return (
     <div className="w-full min-h-dvh bg-zinc-900 relative">
       <header className="w-[90%] h-14 mx-auto bg-zinc-800 relative top-8 rounded-full border border-gray-800 flex gap-4 items-center text-gray-300 pl-5 pr-2 py-2">
         <h1 className={cssHeading({})}>
           <NavLink to={"/"}>PORTFOLIO.</NavLink>
         </h1>
-        <button className="absolute md:hidden" onClick={() => setHidden(!hidden)}>
+        <button
+          className="absolute md:hidden"
+          onClick={() => setHidden(!hidden)}
+        >
           <MdMenu className="text-2xl" />
         </button>
         <nav className={cssNav({ hidden })}>
           <NavLink
             to="/about"
-            className={pathname.includes("about") && "font-semibold"}
+            className={pathname.includes("about") && "font-semibold text-yellow-300"}
           >
             About
           </NavLink>
           <NavLink
             to="/contact"
-            className={pathname.includes("contact") && "font-semibold"}
+            className={pathname.includes("contact") && "font-semibold text-yellow-300"}
           >
             Contact
           </NavLink>
           <NavLink
             to="/project"
-            className={pathname.includes("project") && "font-semibold"}
+            className={pathname.includes("project") && "font-semibold text-yellow-300"}
           >
             Project
           </NavLink>
@@ -64,6 +70,26 @@ const Layouts = () => {
           </NavLink>
         </nav>
       </header>
+
+      <Helmet>
+        <title>
+          {pathname === "/"
+            ? "Portofolio Kurniawan Pratama"
+            : `Porto | ${pathname
+                .split("/")[1]
+                .split("")
+                .map((char, cIndex) =>
+                  cIndex === 0 ? char.toUpperCase() : char
+                )
+                .join("")}`}
+        </title>
+        <link
+          rel="shortcut icon"
+          href="https://www.svgrepo.com/show/527959/user-rounded.svg"
+          type="image/svg"
+        />
+        <meta name="description" content="Kurniawan Pratama sedang mencari pekerjaan dibidang Software Engineer. Hubungi jika saya adalah kandidat yang cocok." />
+      </Helmet>
 
       <Outlet />
     </div>
